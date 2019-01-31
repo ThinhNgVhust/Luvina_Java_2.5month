@@ -17,5 +17,7 @@ public class Link {
 	public boolean equals(int iData, double dData) {
 		return (this.iData == iData && this.dData == dData);
 	}
-
+	public boolean equals(Link link) {
+		return (this.iData == link.iData && this.dData == link.dData);
+	}
 }

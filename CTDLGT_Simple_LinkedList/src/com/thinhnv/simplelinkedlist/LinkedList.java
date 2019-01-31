@@ -35,6 +35,8 @@ public class LinkedList {
 			if (current.equals(tmp)) {
 				System.out.println("Found");
 				return current;
+			} else {
+				current = current.next;
 			}
 		}
 		System.out.println("Not found any link with that data");
@@ -43,13 +45,15 @@ public class LinkedList {
 
 	public void deleteLink(int iData, double dData) {
 		Link pre = fisrt;
-		Link current = fisrt.next;
-		while (current != null && pre != null) {
+		Link current = fisrt;
+		if (this.fisrt.equals(iData, dData)) {
+			this.deleteFirst();
+			return;
+		}
+		while (current != null) {
 			if (current.equals(iData, dData)) {
-				// cv
-				pre.next = current.next;
-				System.out.println("Deleted");
-				return;
+				current = current.next;
+				pre.next = current;
 			} else {
 				pre = current;
 				current = current.next;
