@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.thinhnv.thuchanhifelse&apos; to &apos;com.thinhnv.thuchanh&apos;&#x0A;- Original project: &apos;ThucHanhSwitchCase&apos;&#x0A;- Original element: &apos;ThucHanhSwitchCase/src/com.thinhnv.thuchanhifelse&apos;&#x0A;- Renamed element: &apos;ThucHanhSwitchCase/src/com.thinhnv.thuchanh&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.thinhnv.thuchanhifelse&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.thinhnv.thuchanhifelse" name="com.thinhnv.thuchanh" qualified="false" references="true" stamp="1548246517580" textual="false" version="1.0"/>
+</session>

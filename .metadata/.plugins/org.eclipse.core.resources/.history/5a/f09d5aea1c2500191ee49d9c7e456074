@@ -1,0 +1,37 @@
+package com.thinhnv.ungdungquanlytailieu.thuvien;
+
+import com.thinhnv.ungdungquanlytailieu.thuvien.tailieu.TaiLieu;
+
+public class QuanLyThuVien {
+	private int nElements;
+	private TaiLieu[] dsTaiLieu;
+
+	public QuanLyThuVien(int nElements) {
+		this.nElements = nElements;
+	}
+
+	public void nhapTaiLieu(TaiLieu tl) {
+		try {
+			this.dsTaiLieu[nElements++] = tl;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Thu vien da day, khong the nhap duoc them");
+		}
+	}
+
+	public void inTTSach() {
+
+	}
+
+	public void inTTBao() {
+
+	}
+
+	public void inTTTapChi() {
+
+	}
+
+	public void inTTTaiLieu() {
+
+	}
+}

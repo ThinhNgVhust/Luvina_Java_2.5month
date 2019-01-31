@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.thinhnv.caidatcacthuattoansapxep.thuattoansapxep.Sort&apos; to &apos;SimpleSort&apos;&#x0A;- Original project: &apos;SortingNumbersMethods&apos;&#x0A;- Original element: &apos;com.thinhnv.caidatcacthuattoansapxep.thuattoansapxep.Sort&apos;&#x0A;- Renamed element: &apos;com.thinhnv.caidatcacthuattoansapxep.thuattoansapxep.SimpleSort&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Sort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.thinhnv.caidatcacthuattoansapxep.thuattoansapxep{Sort.java[Sort" matchStrategy="1" name="SimpleSort" qualified="false" references="true" similarDeclarations="false" stamp="1548607843584" textual="false" version="1.0"/>
+</session>

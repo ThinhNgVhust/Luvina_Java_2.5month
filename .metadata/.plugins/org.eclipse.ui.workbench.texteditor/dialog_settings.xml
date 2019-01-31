@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="themTaiLieu" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="nhapTaiLieu"/>
+			<item value="them"/>
+			<item value="elements"/>
+			<item value="stringBuilder"/>
+			<item value="ro ="/>
+			<item value="ro"/>
+			<item value="j2"/>
+			<item value="i"/>
+			<item value="private static"/>
+			<item value="max"/>
+			<item value="doulbe"/>
+			<item value="int"/>
+			<item value="private"/>
+		</list>
+		<list key="replacehistory">
+			<item value="themTaiLieu"/>
+			<item value="nElements"/>
+			<item value="str"/>
+			<item value="roDungHang = "/>
+			<item value="roDungHang"/>
+			<item value="k"/>
+			<item value="soTuNhien"/>
+			<item value="public static"/>
+			<item value="double"/>
+			<item value="doulbe"/>
+			<item value="public"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="342" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="406" key="DIALOG_HEIGHT"/>
+		<item value="835" key="DIALOG_X_ORIGIN"/>
+		<item value="115" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

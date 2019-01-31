@@ -1,0 +1,11 @@
+package com.thinhnv.ungdungquanlytailieu.thuvien.tailieu;
+
+public class Bao extends{
+	private int ngayPhatHanh;
+
+	public Bao(int ngayPhatHanh) {
+		super();
+		this.ngayPhatHanh = ngayPhatHanh;
+	}
+	
+}

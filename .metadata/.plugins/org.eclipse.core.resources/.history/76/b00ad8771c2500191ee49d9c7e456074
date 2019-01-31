@@ -1,0 +1,13 @@
+package com.thinhnv.ungdungquanlytailieu.thuvien.tailieu;
+
+public class TapChi extends TaiLieu {
+	private int soPhatHanh;
+	private int thangPhatHanh;
+
+	public TapChi(String maTL, String tenTL, int soBanPhatHanh, int soPhatHanh, int thangPhatHanh) {
+		super(maTL, tenTL, soBanPhatHanh);
+		this.soPhatHanh = soPhatHanh;
+		this.thangPhatHanh = thangPhatHanh;
+	}
+
+}

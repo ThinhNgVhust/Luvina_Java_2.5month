@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.thinhnv.ungdunghinh2d.goi2d.hinh.cacloaihinh.tamgiac.TG&apos; to &apos;TamGiac&apos;&#x0A;- Original project: &apos;UngDungHinh2D_Updated&apos;&#x0A;- Original element: &apos;com.thinhnv.ungdunghinh2d.goi2d.hinh.cacloaihinh.tamgiac.TG&apos;&#x0A;- Renamed element: &apos;com.thinhnv.ungdunghinh2d.goi2d.hinh.cacloaihinh.tamgiac.TamGiac&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TG&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.thinhnv.ungdunghinh2d.goi2d.hinh.cacloaihinh.tamgiac{TG.java[TG" matchStrategy="1" name="TamGiac" qualified="false" references="true" similarDeclarations="false" stamp="1548862817030" textual="false" version="1.0"/>
+</session>
