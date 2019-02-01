@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/eclipse-workspace/SB"/>
+		<item value="/home/thinhnv/eclipse-workspace/SoNguyenTo"/>
+		<item value="/home/thinhnv/eclipse-workspace/ArrayObject"/>
+		<item value="/home/thinhnv/eclipse-workspace/SmartFinder"/>
+		<item value="/home/thinhnv/eclipse-workspace/BounceBall"/>
+		<item value="/home/thinhnv/eclipse-workspace/LietKeDayCon"/>
 		<item value="/home/thinhnv/eclipse-workspace/TDLT_UngDungHinh2D_Updated"/>
 		<item value="/home/thinhnv/eclipse-workspace/Text"/>
 		<item value="/home/thinhnv/eclipse-workspace/SmartText"/>
