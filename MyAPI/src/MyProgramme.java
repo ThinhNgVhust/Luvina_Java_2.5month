@@ -13,7 +13,7 @@ public class MyProgramme {
 			int q = StdIn.readInt();
 			if (!uf.connected(p, q)) {
 				uf.union(p, q);
-				StdOut.println(p + " " + q);
+				StdOut.println(p + "__ " + q);
 			}
 		}
 	}

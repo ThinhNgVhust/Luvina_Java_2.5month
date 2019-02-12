@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/Desktop/ChuaBai-ThucHanhArrays"/>
+		<item value="/home/thinhnv/Desktop/ChuaBaiTapForWhile"/>
+		<item value="/home/thinhnv/Desktop/ChuaBaiTapForWhile/SmartFinder"/>
+		<item value="/home/thinhnv/Desktop/ChuaBaiTapForWhile/QuanLyMonPhai"/>
+		<item value="/home/thinhnv/eclipse-workspace/StudentManager"/>
+		<item value="/home/thinhnv/eclipse-workspace/MyAPI"/>
+		<item value="/home/thinhnv/eclipse-workspace/SortingNumbersMethods"/>
 		<item value="/home/thinhnv/eclipse-workspace/SB"/>
 		<item value="/home/thinhnv/eclipse-workspace/SoNguyenTo"/>
 		<item value="/home/thinhnv/eclipse-workspace/ArrayObject"/>

@@ -8,6 +8,8 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="tcNameAscScoreDes"/>
+			<item value="&#x09;&#x09;sm.add(student1);"/>
 			<item value="nhapTaiLieu"/>
 			<item value="them"/>
 			<item value="elements"/>
