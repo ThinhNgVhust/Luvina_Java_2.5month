@@ -24,15 +24,17 @@ public class TruyenCuoi {
 		return tenTruyen;
 	}
 
-	public String getNoiDung() {
+	private String getNoiDung() {
 		return noiDung;
+	}
+
+	public void docTruyen() {
+		System.out.println(this.getNoiDung());
 	}
 
 	@Override
 	public String toString() {
-		return "\nTruyenCuoi [maId=" + maId + ", tenTruyen=" + tenTruyen + ", ngayXuatBan=" + ngayXuatBan + "]";
+		return "\tMã truyện: " + maId + "" + "\n\tTên Truyện: " + tenTruyen + "\n\tNgày Xuất Bản: " + ngayXuatBan + "]";
 	}
-	
-	
 
 }

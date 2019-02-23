@@ -1,79 +1,84 @@
 package com.thinhnv.ungdungtruyencuoi.quanlytruyencuoi.truyencuoi;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChuDeTruyen {
+	public static final int TIM_THEO_ID = 0;
+	public static final int TIM_THEO_TEN = 1;
 	private String maChuDe;
 	private String tenChuDe;
-	private TruyenCuoi[] dsTruyen;
-	private int nElements;
+	private List<TruyenCuoi> dsTruyen = new ArrayList<>();
 
 	public ChuDeTruyen(String maChude, String tenChuDe) {
 		this.maChuDe = maChude;
 		this.tenChuDe = tenChuDe;
-		dsTruyen = new TruyenCuoi[3];
-		this.nElements = 0;
 	}
 
-	public TruyenCuoi findByName(String name) {
-		TruyenCuoi kq = null;
-		for (int i = 0; i < dsTruyen.length; i++) {
-			if (dsTruyen[i] != null && dsTruyen[i].getTenTruyen().equals(name)) {
-				System.out.println("Tim thay truyen co ten: " + name);
-				return kq;
+	private TruyenCuoi timKiemTruyen(int kieuTimKiem, String value) {
+		if (kieuTimKiem == TIM_THEO_ID) {
+			for (int i = 0; i < dsTruyen.size(); i++) {
+				TruyenCuoi truyenCuoi = this.dsTruyen.get(i);
+				if (truyenCuoi.getMaId().equals(value)) {
+					System.out.println("Tìm thầy truyện có mã " + value + " !");
+					return truyenCuoi;
+				}
 			}
+			System.out.println("Không tìm thấy truyện có mã " + value + "!_ Trả kết quả về null");
+			return null;
+		} else {
+			for (int i = 0; i < dsTruyen.size(); i++) {
+				TruyenCuoi truyenCuoi = this.dsTruyen.get(i);
+				if (truyenCuoi.getTenTruyen().equals(value)) {
+					System.out.println("Tìm thầy truyện có tên " + value + " !");
+					return truyenCuoi;
+				}
+			}
+			System.out.println("Không tìm thầy truyện có tên " + value + " !");
+			return null;
 		}
-		System.out.println("Khong tim thay truyen co ten: " + name);
-		return kq;
 	}
 
-	public TruyenCuoi findById(String id) {
-		TruyenCuoi kq = null;
-		for (int i = 0; i < dsTruyen.length; i++) {
-			if (dsTruyen[i] != null && dsTruyen[i].getMaId().equals(id)) {
-				System.out.println("Tim thay truyen co ma id: " + id);
-				kq = this.dsTruyen[i];
-				return kq;
-			}
-		}
-		System.out.println("Khong tim thay truyen co ma id: " + id);
-		return kq;
+	public TruyenCuoi timTruyenTheoTen(String name) {
+		TruyenCuoi truyenCuoi = this.timKiemTruyen(TIM_THEO_TEN, name);
+		return truyenCuoi;
+	}
+
+	public TruyenCuoi timTruyenTheoId(String id) {
+		TruyenCuoi truyenCuoi = this.timKiemTruyen(TIM_THEO_ID, id);
+		return truyenCuoi;
 	}
 
 	public void themTruyen(TruyenCuoi truyenCuoi) {
-		if (this.nElements > 2) {
-			System.out.println("Danh sach truyen theo chu de nay da day! chi chua duoc toi da 3 truyen");
-			return;
+		String id = truyenCuoi.getMaId();
+		String tenTruyen = truyenCuoi.getTenTruyen();
+		for (int i = 0; i < this.dsTruyen.size(); i++) {
+			if (this.dsTruyen.get(i).getMaId().equals(id) || this.dsTruyen.get(i).getTenTruyen().equals(tenTruyen)) {
+				System.out.println("Không thể thêm được truyên do thông tin truyện thêm vào bị trùng!!!");
+			}
 		}
-		this.dsTruyen[nElements++] = truyenCuoi;
+		this.dsTruyen.add(truyenCuoi);
+		System.out.println(
+				"Thêm truyện có tên " + truyenCuoi.getTenTruyen() + " thành công vào chủ đề: " + this.tenChuDe);
 	}
 
 	public void xoaTruyen(String maId) {
-		TruyenCuoi truyenCuoi = this.findById(maId);
-		if (truyenCuoi == null)
-			return;
-		for (int i = 0; i < dsTruyen.length; i++) {
-			if (truyenCuoi.getMaId().equals(dsTruyen[i].getMaId())) {
-				for (int j = i; j < dsTruyen.length - 1; j++) {
-					dsTruyen[j] = dsTruyen[j + 1];
-				}
-				--nElements;
-				--i;
+		for (int i = 0; i < dsTruyen.size(); i++) {
+			if (dsTruyen.get(i).getMaId().equals(maId)) {
+				dsTruyen.remove(i);
 			}
 		}
-		System.out.println("Xoa truyen thanh cong");
 	}
 
+//
 	public void docTruyen(String maId) {
-		TruyenCuoi truyenCuoi = this.findById(maId);
-		if (truyenCuoi == null) {
-		} else {
-			System.out.println("Ten truyen: " + truyenCuoi.getTenTruyen());
-			System.out.println("Noi dung truyen la: ");
-			System.out.println(truyenCuoi.getNoiDung());
+		TruyenCuoi truyenCuoi = this.timTruyenTheoId(maId);
+		if (truyenCuoi != null) {
+			truyenCuoi.docTruyen();
 		}
 	}
 
+//
 	public String getMaChuDe() {
 		return maChuDe;
 	}
@@ -82,10 +87,12 @@ public class ChuDeTruyen {
 		return this.tenChuDe;
 	}
 
-	@Override
-	public String toString() {
-		return "ChuDeTruyen [maChuDe=" + maChuDe + ", tenChuDe=" + tenChuDe + ", dsTruyen=" + Arrays.toString(dsTruyen)
-				+ "]";
+	public void hienThiDanhSachTruyen() {
+		System.out.println("\n");
+		System.out.println("Danh sách truyện trong chủ đề " + this.tenChuDe);
+		for (int i = 0; i < this.dsTruyen.size(); i++) {
+			TruyenCuoi truyenCuoi = this.dsTruyen.get(i);
+			System.out.println((i + 1) + " " + truyenCuoi);
+		}
 	}
-
 }

@@ -2,40 +2,44 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="themTaiLieu" key="selection"/>
+		<item value="toString()" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="toString()"/>
+			<item value="toString"/>
+			<item value="to"/>
+			<item value="checkCheoTrai"/>
+			<item value="checkCheoPhai"/>
+			<item value="TYPE_ID"/>
+			<item value="minString"/>
+			<item value="findById"/>
+			<item value="findByName"/>
+			<item value="listHoc"/>
+			<item value="tuoi"/>
+			<item value="ten"/>
+			<item value="minStr"/>
+			<item value="maxStr"/>
 			<item value="tcNameAscScoreDes"/>
-			<item value="&#x09;&#x09;sm.add(student1);"/>
-			<item value="nhapTaiLieu"/>
-			<item value="them"/>
-			<item value="elements"/>
-			<item value="stringBuilder"/>
-			<item value="ro ="/>
-			<item value="ro"/>
-			<item value="j2"/>
-			<item value="i"/>
-			<item value="private static"/>
-			<item value="max"/>
-			<item value="doulbe"/>
-			<item value="int"/>
-			<item value="private"/>
 		</list>
 		<list key="replacehistory">
+			<item value="checkCheoLen"/>
+			<item value="checkCheoXuong"/>
+			<item value="TYPE_NOI_BAN"/>
+			<item value="finMinString"/>
+			<item value="timMaTruyen"/>
+			<item value="timTenTruyen"/>
+			<item value="age"/>
+			<item value="name"/>
+			<item value="maxStr"/>
+			<item value=""/>
 			<item value="themTaiLieu"/>
 			<item value="nElements"/>
 			<item value="str"/>
 			<item value="roDungHang = "/>
 			<item value="roDungHang"/>
-			<item value="k"/>
-			<item value="soTuNhien"/>
-			<item value="public static"/>
-			<item value="double"/>
-			<item value="doulbe"/>
-			<item value="public"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

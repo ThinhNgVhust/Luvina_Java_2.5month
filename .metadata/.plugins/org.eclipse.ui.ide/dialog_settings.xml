@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/eclipse-workspace/NL"/>
+		<item value="/home/thinhnv/eclipse-workspace/BTVN_NGOAILE_1"/>
+		<item value="/home/thinhnv/Desktop/Bai2matrixFun"/>
+		<item value="/home/thinhnv/eclipse-workspace/MatrixFun"/>
+		<item value="/home/thinhnv/eclipse-workspace/FindWord"/>
+		<item value="/home/thinhnv/eclipse-workspace/NoteDacSan"/>
+		<item value="/home/thinhnv/Desktop/CoCaRo (copy)"/>
+		<item value="/home/thinhnv/Desktop/CoCaRo"/>
+		<item value="/home/thinhnv/Desktop/NguyenVanThinh/MatrixFun"/>
+		<item value="/home/thinhnv/Desktop/NguyenVanThinh/FindWord"/>
+		<item value="/home/thinhnv/eclipse-workspace/MaxtrixFun"/>
+		<item value="/home/thinhnv/eclipse-workspace/TestJava1_Sang"/>
+		<item value="/home/thinhnv/Desktop/StudentManager"/>
+		<item value="/home/thinhnv/eclipse-workspace/UngDungTruyenCuoi"/>
+		<item value="/home/thinhnv/eclipse-workspace/TDLT_ThuVienQuanLyTaiLieu"/>
 		<item value="/home/thinhnv/Desktop/ChuaBai-ThucHanhArrays"/>
 		<item value="/home/thinhnv/Desktop/ChuaBaiTapForWhile"/>
 		<item value="/home/thinhnv/Desktop/ChuaBaiTapForWhile/SmartFinder"/>
