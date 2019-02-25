@@ -1,18 +1,24 @@
 package com.thinhnv.googlephotoapp.quanlychude.chude.hinhanh;
 
-public abstract class HinhAnh {
+import com.thinhnv.googlephotoapp.itimkiem.ITimKiemXeTuongTu;
+
+public abstract class HinhAnh implements ITimKiemXeTuongTu {
+	protected String idChuDe;
 	protected String idHinhAnh;
 	protected String tenHinhAnh;
 	protected String duongDan;
-	protected String idChuDe;
 	protected String kichThuoc;
 
-	public HinhAnh(String idHinhAnh, String tenHinhAnh, String duongDan, String idChuDe, String kichThuoc) {
+	protected HinhAnh(String idChuDe, String idHinhAnh, String tenHinhAnh, String duongDan, String kichThuoc) {
 		this.idChuDe = idChuDe;
 		this.idHinhAnh = idHinhAnh;
 		this.tenHinhAnh = tenHinhAnh;
 		this.duongDan = duongDan;
 		this.kichThuoc = kichThuoc;
+	}
+
+	public HinhAnh() {
+		super();
 	}
 
 	public String getIdHinhAnh() {
@@ -23,26 +29,43 @@ public abstract class HinhAnh {
 		return tenHinhAnh;
 	}
 
-	public void hienThiAnh() {
-		System.out.println("Hien thi anh");
+	public void phongTo() {
+		System.out.println("Phóng to ảnh " + this.tenHinhAnh);
 	}
 
-	public void inTTChung() {
-		System.out.println("idHinhAnh" + idHinhAnh);
-		System.out.println("tenHinhAnh" + tenHinhAnh);
-		System.out.println("duongDan" + duongDan);
-		System.out.println("idChuDe" + idChuDe);
-		System.out.println("kichThuoc" + kichThuoc);
+	public void thuNho() {
+		System.out.println("Thu nhỏ ảnh " + this.tenHinhAnh);
 	}
 
-	public void thuPhong(double scale) {
-		if (scale > 1) {
-			System.out.println("Phong to " + this.tenHinhAnh);
-		} else if (scale < 1) {
-			System.out.println("Thu nho " + this.tenHinhAnh);
-		} else {
-			System.out.println("Giu nguyen " + this.tenHinhAnh);
+	public void inTT() {
+		System.out.println("Mã chủ đề: " + this.idChuDe);
+		System.out.println("Mã hình ảnh: " + this.idHinhAnh);
+		System.out.println("Tên hình ảnh: " + this.tenHinhAnh);
+		System.out.println("Dường dẫn: " + this.duongDan);
+		System.out.println("Kích thước ảnh: " + this.kichThuoc);
+	}
+
+	public String cacKyTu(String s) {
+		// TODO Auto-generated method stub
+		String gio = "";
+		s += "";
+		for (int i = 0; i < s.length(); i++) {
+			char kyTu = s.charAt(i);
+			if (!gio.contains(kyTu + "")) {
+				gio += kyTu;
+			}
 		}
+		return gio;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof HinhAnh) {
+			return this.idHinhAnh.equalsIgnoreCase(((HinhAnh) obj).idHinhAnh);
+		}
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+
+	public abstract void xemAnh();
 }

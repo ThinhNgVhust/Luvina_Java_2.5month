@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="toString()" key="selection"/>
+		<item value="demSoUoc" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="findMax"/>
+			<item value="finMax"/>
+			<item value="`"/>
+			<item value="i"/>
 			<item value="toString()"/>
 			<item value="toString"/>
 			<item value="to"/>
@@ -19,12 +23,10 @@
 			<item value="findByName"/>
 			<item value="listHoc"/>
 			<item value="tuoi"/>
-			<item value="ten"/>
-			<item value="minStr"/>
-			<item value="maxStr"/>
-			<item value="tcNameAscScoreDes"/>
 		</list>
 		<list key="replacehistory">
+			<item value="demSoUoc"/>
+			<item value="findMax"/>
 			<item value="checkCheoLen"/>
 			<item value="checkCheoXuong"/>
 			<item value="TYPE_NOI_BAN"/>
@@ -38,15 +40,13 @@
 			<item value="themTaiLieu"/>
 			<item value="nElements"/>
 			<item value="str"/>
-			<item value="roDungHang = "/>
-			<item value="roDungHang"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="342" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="406" key="DIALOG_HEIGHT"/>
-		<item value="835" key="DIALOG_X_ORIGIN"/>
+		<item value="313" key="DIALOG_X_ORIGIN"/>
 		<item value="115" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

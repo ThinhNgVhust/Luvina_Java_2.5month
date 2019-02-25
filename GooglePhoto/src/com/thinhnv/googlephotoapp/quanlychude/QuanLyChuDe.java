@@ -6,116 +6,130 @@ import com.thinhnv.googlephotoapp.quanlychude.chude.ChuDe;
 import com.thinhnv.googlephotoapp.quanlychude.chude.hinhanh.HinhAnh;
 
 public class QuanLyChuDe {
-	private ArrayList<ChuDe> dsChuDe = new ArrayList<ChuDe>();
+	private ArrayList<ChuDe> dsChuDe;
 
 	public QuanLyChuDe() {
-		System.out.println("Khoi tao quan ly chu de");
+		this.dsChuDe = new ArrayList<ChuDe>();
 	}
 
-	public void themChuDe(ChuDe chuDe) {
-		if (this.kiemTraRong()) {
-			this.dsChuDe.add(chuDe);
-			System.out.println("Them chu de " + chuDe.getTenChuDe() + " thanh cong");
-			return;
-		}
-		for (int i = 0; i < this.dsChuDe.size(); i++) {
-			if (this.dsChuDe.get(i).getIdChuDe().equals(chuDe.getIdChuDe())) {
-				System.out.println("Chu de [" + this.dsChuDe.get(i).getIdChuDe()+" : "+this.dsChuDe.get(i).getTenChuDe()+"] da ton tai");
-				return;
+	public void themChuDe(ChuDe chude) {
+		if (this.dsChuDe.isEmpty()) {
+			this.dsChuDe.add(chude);
+			System.out.println("Thêm chủ đề " + chude.getTenChuDe() + " thành công");
+		} else {
+			if (isExist(chude.getIdChuDe()) != null) {
+				System.out.println("Đã tồn tại chủ đề có id " + chude.getIdChuDe() + " không thêm được!");
+			} else {
+				this.dsChuDe.add(chude);
+				System.out.println("Thêm chủ đề " + chude.getTenChuDe() + " thành công");
 			}
 		}
-		this.dsChuDe.add(chuDe);
-		System.out.println("Them chu de " + chuDe.getTenChuDe() + " thanh cong");
-		return;
 	}
 
-	public void hienThiDanhSachChuDe() {
-		if (this.kiemTraRong()) {
-			System.out.println("Danh sach rong");
+	public void xoaAnh(String idChuDe, String idAnh) {
+		if (this.isEmpty()) {
+			System.out.println("Không xóa được do chưa có chủ đề nào trong danh sách");
 			return;
 		}
-		System.out.println("Danh sach chu de");
-		for (int i = 0; i < this.dsChuDe.size(); i++) {
-			System.out.println(this.dsChuDe.get(i).getTenChuDe());
+		ChuDe result = null;
+		for (ChuDe chuDe : dsChuDe) {
+			if (chuDe.getIdChuDe().equals(idChuDe)) {
+				result = chuDe;
+				break;
+			}
 		}
-	}
-
-	public void themAnh(String idChuDe, HinhAnh hinhAnh) {
-		if (kiemTraRong()) {
-			System.out.println("Chua tao chu de nen khong them duoc hinh anh " + hinhAnh.getTenHinhAnh());
-			System.out.println("Hay tao chu de truoc");
+		if (result == null) {
+			System.out.println("Không thấy chủ đề có mã id " + idChuDe + " không xoa được ảnh");
 			return;
-		}
-		ChuDe chuDe = timChuDe(idChuDe);
-		if (chuDe == null) {
-			System.out.println("Khong co chu de co ma" + idChuDe);
-			return;
-		}
-		if (chuDe.khongPhaiTrongChuDe(hinhAnh)) {
-			chuDe.themAnh(hinhAnh);
+		} else {
+			result.xoaAnh(idAnh);
 		}
 	}
 
 	public void xoaChuDe(String idChuDe) {
-		for (int i = 0; i < this.dsChuDe.size(); i++) {
-			if (this.dsChuDe.get(i).getIdChuDe().equals(idChuDe)) {
-				this.dsChuDe.remove(i);
-				System.out.println("Xoa thanh cong chu de co id " + idChuDe);
-				return;
-			}
+		if (this.isEmpty()) {
+			System.out.println("Không xóa được do chưa có chủ đề nào trong danh sách");
+			return;
 		}
-	}
-
-	public void suaTenChuDe(String id, String tenMoi) {
-		ChuDe chuDe = this.timChuDe(id);
+		ChuDe chuDe = this.isExist(idChuDe);
 		if (chuDe == null) {
-			System.out.println("Khong ton tai chu de co id " + id);
-			return;
+			System.out.println("Không tồn tại chủ đề có mã id " + idChuDe + "nên không xóa được chủ đề!");
+		} else {
+			this.dsChuDe.remove(chuDe);
+			System.out.println("Xóa chủ đề có id " + idChuDe + " thành công");
 		}
-		chuDe.suaTen(tenMoi);
 	}
 
-	public void suaNgayTaoChuDe(String id, String ngayTaoMoi) {
-		ChuDe chuDe = this.timChuDe(id);
+	public void themAnh(String idChuDe, HinhAnh hinhAnh) {
+		if (this.isEmpty()) {
+			System.out.println("Chưa có chủ đề nào trong danh sách, không thêm được ảnh");
+			return;
+		}
+		ChuDe chuDe = this.isExist(idChuDe);
 		if (chuDe == null) {
-			System.out.println("Khong ton tai chu de co id " + id);
-			return;
+			System.out.println("Không tồn tại chủ đề có mã id " + idChuDe + " nên không thêm được ảnh");
+		} else {
+			chuDe.themAnh(hinhAnh);
 		}
-		chuDe.suaNgayTao(ngayTaoMoi);
 	}
 
-	public void xoaAnh(String idChuDe, String idAnh) {
-		ChuDe chuDe = this.timChuDe(idChuDe);
-		if (chuDe == null) {
-			System.out.println("Khong co chu de co ma" + idChuDe);
-			return;
-		}
-		HinhAnh hinhAnh = chuDe.timAnhTheoId(idAnh);
-		if (hinhAnh == null) {
-			System.out.println("Trong chu de khong ton tai anh " + hinhAnh.getTenHinhAnh() + ", khong xoa duoc");
-			return;
-		}
-		chuDe.xoaAnh(idAnh);
-	}
-
-	public ChuDe timChuDe(String idChuDe) {
-		if (this.kiemTraRong()) {
+	public ArrayList<ChuDe> timKiemChuDeTheoTen(String tenChuDe) {
+		if (this.isEmpty()) {
+			System.out.println("Chưa có chủ đề nào trong danh sách, không tìm kiếm được");
 			return null;
 		}
-		for (int i = 0; i < this.dsChuDe.size(); i++) {
-			if (this.dsChuDe.get(i).equals(idChuDe)) {
-				return this.dsChuDe.get(i);
+		int count = 0;
+		ArrayList<ChuDe> result = new ArrayList<ChuDe>();
+		for (ChuDe chuDe : this.dsChuDe) {
+			if (chuDe.getTenChuDe().equals(tenChuDe)) {
+				result.add(chuDe);
+				count++;
+			}
+		}
+		if (count == 0) {
+			System.out.println("Không tìm thấy chủ đề có tên " + tenChuDe);
+		} else {
+			System.out.println("Tìm thấy " + count + "chủ đề có tên " + tenChuDe);
+		}
+		return result;
+	}
+
+	public ArrayList<HinhAnh> timKiemHinhAnhTrongChuDe(String idChuDe, String tenAnh) {
+		if (this.isEmpty()) {
+			System.out.println("Chưa có chủ đề nào trong danh sách, không thêm được ảnh");
+			return null;
+		}
+		ArrayList<HinhAnh> result = new ArrayList<HinhAnh>();
+		ChuDe chuDe = isExist(idChuDe);
+		if (chuDe == null) {
+			System.out.println("Không tìm thấy chủ đề có id " + idChuDe);
+			return null;
+		}
+		ArrayList<HinhAnh> kq = chuDe.timKiemAnhTheoTen(tenAnh);
+		if (kq == null)
+			return null;
+		result.addAll(kq);
+		return result;
+	}
+
+	public ArrayList<HinhAnh> timKiemAnhTuongTu() {
+		ArrayList<HinhAnh> result = new ArrayList<HinhAnh>();
+
+		return result;
+	}
+
+	private ChuDe isExist(String id) {
+		if (this.isEmpty()) {
+			return null;
+		}
+		for (ChuDe chuDe : this.dsChuDe) {
+			if (chuDe.getIdChuDe().equals(id)) {
+				return chuDe;
 			}
 		}
 		return null;
 	}
-
-	private boolean kiemTraRong() {
-		// TODO Auto-generated method stub
+	private boolean isEmpty() {
 		return this.dsChuDe.size() == 0 ? true : false;
 	}
-	public void timKiemAnhTuongTu() {
-		
-	}
-
 }

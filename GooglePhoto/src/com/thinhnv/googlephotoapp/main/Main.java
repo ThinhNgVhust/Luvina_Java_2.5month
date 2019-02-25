@@ -1,51 +1,49 @@
 package com.thinhnv.googlephotoapp.main;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.thinhnv.googlephotoapp.itimkiem.ITimKiemXeTuongTu;
 import com.thinhnv.googlephotoapp.quanlychude.QuanLyChuDe;
 import com.thinhnv.googlephotoapp.quanlychude.chude.ChuDe;
 import com.thinhnv.googlephotoapp.quanlychude.chude.hinhanh.AnhCayCo;
 import com.thinhnv.googlephotoapp.quanlychude.chude.hinhanh.AnhDongVat;
-import com.thinhnv.googlephotoapp.quanlychude.chude.hinhanh.AnhSieuXe;
 import com.thinhnv.googlephotoapp.quanlychude.chude.hinhanh.HinhAnh;
 
 public class Main {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ChuDe cd1 = new ChuDe("CD1", "Siêu xe", "25/10/2017");
-		ChuDe cd2 = new ChuDe("CD2", "Cây thuốc", "25/10/2017");
-		ChuDe cd3 = new ChuDe("CD3", "Động vật ăn thịt", "25/10/2017");
+		HinhAnh h1 = new AnhDongVat("CD3", "HA31", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ vằn", "Rừng", "Gào");
+		HinhAnh h2 = new AnhDongVat("CD3", "HA32", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang mang", "Rừng", "Gào");
+		HinhAnh h3 = new AnhDongVat("CD3", "HA33", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang mang chúa", "Rừng",
+				"Gào");
+		HinhAnh h4 = new AnhDongVat("CD3", "HA34", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ màng", "Rừng", "Gào");
+		HinhAnh h5 = new AnhDongVat("CD3", "HA35", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang", "Rừng", "Gào");
 
-		HinhAnh h1 = new AnhDongVat("HA31", "Hovan.jpg", "C:/hovan.jpg", "CD3", "1.2MB", "Hổ vằn", "Rừng", "Gào");
-		HinhAnh h2 = new AnhDongVat("HA32", "Hotrang.jpg", "C:/hotrang.jpg", "CD3", "1.5MB", "Hổ trắng", "Rừng", "Gào");
-		HinhAnh h3 = new AnhDongVat("HA33", "Linho.jpg", "C:/linho.jpg", "idChuDe", "2.1MB", "Linh hồ", "Rừng",
-				"Kíu kíu");
-		HinhAnh h4 = new AnhDongVat("HA34", "Meonui.jpg", "C:/meonui.jpg", "idChuDe", "2.0MB", "Mèo núi", "Rừng",
-				"Meo meo");
-		cd1.themAnh(h1);
+		HinhAnh h6 = new AnhDongVat("CD3", "HA36", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hình mamangmangmang", "Rừng",
+				"Gào");
+		HinhAnh h7 = new AnhDongVat("CD3", "HA37", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang mang1", "Rừng",
+				"Gào");
+		HinhAnh h8 = new AnhDongVat("CD3", "HA38", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang mang2", "Rừng",
+				"Gào");
+		HinhAnh h9 = new AnhDongVat("CD3", "HA39", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang man3", "Rừng", "Gào");
+		HinhAnh h10 = new AnhDongVat("CD3", "HA40", "Hovan.jpg", "C:/hovan.jpg", "1.2MB", "Hổ mang mang4", "Rừng",
+				"Gào");
+		ChuDe cd1 = new ChuDe("CD1", "Động vật", "20");
 		cd1.themAnh(h1);
 		cd1.themAnh(h2);
 		cd1.themAnh(h3);
 		cd1.themAnh(h4);
-		HinhAnh h5 = new AnhCayCo("HA21", "Bacha.jpg", "C:/bacha.jpg", "CD2", "0.7MB", "Bạc Hà", "Giảm đau đầu");
-		HinhAnh h6 = new AnhCayCo("HA22", "TrinhNu.jpg", "C:/trinhnu.jpg", "CD2", "1.8MB", "Trinh Nữ", "Chữa ung thư");
-		cd2.themAnh(h5);
-		cd2.themAnh(h6);
-
-		HinhAnh h7 = new AnhSieuXe("HA11", "Mercedes.jpg", "C:/ mercedes.jpg", "CD1", "1.1MB", "Mercedes", "Benz", 4.5);
-		HinhAnh h8 = new AnhSieuXe("HA12", "Camry.jpg", "C:/ Camry.jpg", "CD1", "1.3MB", "Camry", "Toyota", 4.51);
-		HinhAnh h9 = new AnhSieuXe("HA13", "Landrover.jpg", "C:/ Landrover.jpg", "CD1", "2.4MB", "Land rover",
-				"Land rover", 7.1);
-		cd3.themAnh(h7);
-		cd3.themAnh(h8);
-		cd3.themAnh(h9);
-//		cd1.timAnhTheoId("CD11");
-		QuanLyChuDe ql = new QuanLyChuDe();
-		ql.themChuDe(cd1);
-		ql.themChuDe(cd2);
-		ql.themChuDe(cd3);
-		ql.themChuDe(cd1);
-		cd1.xoaAnh(h1.getIdHinhAnh());
-		boolean kq = cd1.khongPhaiTrongChuDe(h6);
+		cd1.themAnh(h5);
+		cd1.themAnh(h6);
+		cd1.themAnh(h7);
+		cd1.themAnh(h8);
+		cd1.themAnh(h9);
+		cd1.themAnh(h10);
+		HinhAnh anhDongVat = new AnhDongVat("mang");
+		List<HinhAnh> cd2 = cd1.timKiemTuongTu(anhDongVat);
+		System.out.println(cd2.size());
+		for (HinhAnh hinhAnh : cd2) {
+			hinhAnh.inTT();
+		}
 	}
-
 }
