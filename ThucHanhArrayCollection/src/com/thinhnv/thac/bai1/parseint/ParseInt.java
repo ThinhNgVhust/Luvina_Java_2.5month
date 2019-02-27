@@ -8,7 +8,9 @@ public class ParseInt {
 	private int[] arrInt;
 
 	public ParseInt() {
-		this.arrInt = new int[] { 1, 2, 1, 1, 2, 4, 5, 1, 6, 6, 243, 100, 100, 243, 3, 9, 9, 27, 81 };
+//		this.arrInt = new int[] { 1, 2, 1, 1, 2, 4, 5, 1, 6, 6, 243, 100, 100,100,100 ,243,9,6,7, 3, 9, 9, 27, 81 };
+		this.arrInt = new int[] { 22, 3, 23, 33, 51, 71, 91, 11, 12, 13, 14, 15, 16 };
+//		this.arrInt = new int[] {};
 //		Random rd = new Random();
 //		this.arrInt = new int[50];
 //		for (int i = 0; i < arrInt.length; i++) {
@@ -19,10 +21,13 @@ public class ParseInt {
 	public void inPhanTuXuatHienNhieuHon2VaChiSo() {
 		String gio = "";
 		for (int i = 0; i < arrInt.length; i++) {
-			if (demSoLuong(this.arrInt[i]) > 2 && !gio.contains(this.arrInt[i] + "")) {
+			if (demSoLuong(this.arrInt[i]) >= 2 && !gio.contains(this.arrInt[i] + "")) {
 				gio += this.arrInt[i] + " ";
 				System.out.println(this.arrInt[i] + " at index: [" + cacViTri(this.arrInt[i]) + "]");
 			}
+		}
+		if (gio == "") {
+			System.out.println("Mảng không tồn tại phần tử nào thỏa mãn xuất hiện từ 2 lần trở lên!");
 		}
 	}
 
@@ -49,25 +54,51 @@ public class ParseInt {
 	}
 
 	public void tongCacSoNguyenNhoHon50() {
+		if (this.arrInt.length == 0) {
+			System.out.println("Không tính được tổng do mảng không có phần tử nào");
+			return;
+		}
 		int sum = 0;
 		for (int i = 0; i < arrInt.length; i++) {
 			sum += this.arrInt[i] < 50 ? this.arrInt[i] : 0;
 		}
-		System.out.println("Tong cac so nho hon 50 trong mang: " + sum);
+		System.out.println("Tổng các số nhỏ hơn 50 trong mảng: " + sum);
 	}
 
 	public void sapXepTangDan() {
+		if (this.arrInt.length == 0) {
+			System.out.println("Danh sách trống nên không sắp xếp được");
+			return;
+		}
+		System.out.print("Sắp xếp mảng theo thứ tự tăng dần: ");
 		int[] newArr = Arrays.copyOf(arrInt, arrInt.length);
 		Arrays.sort(newArr);
 		System.out.println(Arrays.toString(newArr));
 	}
 
 	public void cacSoHoanHao() {
+		if (this.arrInt.length == 0) {
+			System.out.println("Không tìm được số hoàn hảo do mảng không có phần tử nào");
+			return;
+		}
+		int countZero = 0;
 		for (int i = 0; i < arrInt.length; i++) {
 			if (this.arrInt[i] == 0) {
-				System.out.println("So hoan hao la: " + this.arrInt[i]);// 0 % number always = 0;
+				countZero++;
+			}
+		}
+		if (countZero == this.arrInt.length) {
+			System.out.println("Dang sách mảng toàn số 0 nên không tồn tại số hoàn hảo nào");
+			return;
+		}
+		for (int i = 0; i < arrInt.length; i++) {
+			if (this.arrInt[i] == 0) {
+				System.out.println("Số hoàn hảo là : " + this.arrInt[i]);// 0 % number always = 0;
 				return;
 			}
+		}
+
+		for (int i = 0; i < arrInt.length; i++) {
 		}
 		int soUocMax = 0;
 		for (int i = 0; i < arrInt.length; i++) {
@@ -75,14 +106,14 @@ public class ParseInt {
 				soUocMax = demSoUoc(this.arrInt[i]);
 			}
 		}
-//		System.out.println(soUocMax);
 		String gio = "";
-		System.out.println("\nDanh sach cac so hoan hao");
+		System.out.print("\nDanh sách các số hoàn hảo: ");
 		for (int i = 0; i < arrInt.length; i++) {
 			if (soUocMax == demSoUoc(this.arrInt[i]) && !gio.contains(this.arrInt[i] + "")) {
 				gio += this.arrInt[i] + " ";
 			}
 		}
+		System.out.println(Arrays.toString(gio.split(" ")));
 
 	}
 

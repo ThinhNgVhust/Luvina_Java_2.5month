@@ -50,7 +50,7 @@ public class CarMgr implements FindAndMoveListener {
 					return car;
 			}
 		}
-		System.out.println("Không tìm thấy ô tô nào có mã " + carId + " trả về null");
+		System.out.println("Không tìm thấy ô tô nào có mã " + carId + ". Trả về null");
 		return null;
 	}
 
@@ -72,9 +72,9 @@ public class CarMgr implements FindAndMoveListener {
 			return null;
 		}
 		// neu chi tim thay 1 xe
-		if (rightTypePosCar.size() == 1) {
-			return rightTypePosCar.get(0);
-		}
+//		if (rightTypePosCar.size() == 1) {
+//			return rightTypePosCar.get(0);
+//		}
 		// neu tim thay nhieu xe co cung typePos
 		// thi tim kiem vi tri gan nhat
 

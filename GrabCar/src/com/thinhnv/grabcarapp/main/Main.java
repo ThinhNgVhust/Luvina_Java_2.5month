@@ -1,7 +1,5 @@
 package com.thinhnv.grabcarapp.main;
 
-import org.w3c.dom.CDATASection;
-
 import com.thinhnv.grabcarapp.car.Car;
 import com.thinhnv.grabcarapp.carmgr.CarMgr;
 import com.thinhnv.grabcarapp.user.User;
@@ -19,6 +17,9 @@ public class Main {
 
 		User thinh = new User("1", "1", "Thịnh");
 		User phuong = new User("1", "1", "Phương");
+		phuong.showInfor();
+		phuong.showAllSchedule();
+		phuong.findCar('A', 'A', "4 chỗ");
 		CarMgr carMgr = new CarMgr("Thành");
 		carMgr.addCar(c1);
 		carMgr.addCar(c2);
@@ -26,14 +27,12 @@ public class Main {
 		carMgr.addCar(c4);
 		carMgr.addCar(c5);
 		carMgr.addCar(c6);
-		CarMgr carMgr1 = new CarMgr("Thịnh");
 		thinh.addFindAndMoveListener(carMgr);// đăng kí lắng nghe và nhận phản hồi từ CarMgr
 		thinh.findCar('A', 'F', "7 chỗ");// tìm kiếm xe
 		thinh.findCar('E', 'G', "7 chỗ");// tìm kiếm xe
 		thinh.findCar('A', 'G', "7 chỗ");
 		thinh.findCar('A', 'G', "17 chỗ");
 		thinh.showAllSchedule();
-
 		phuong.findCar('B', 'D', "4 chỗ");
 		carMgr.showTotalCost();
 

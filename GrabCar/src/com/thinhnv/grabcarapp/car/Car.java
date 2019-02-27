@@ -47,7 +47,7 @@ public class Car {
 		int cost = Math.abs(km) * this.price;
 		this.costTotal += cost;
 		System.out.println("Số tiền khách trả của lộ trình: ");
-		System.out.println("\tTừ " + startPos + " đến " + destPos + " là " + cost+"\n");
+		System.out.println("\tTừ " + startPos + " đến " + destPos + " là " + cost + "\n");
 		// trả về một thông tin lộ trình đường đi
 	}
 

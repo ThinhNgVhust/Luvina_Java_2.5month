@@ -24,7 +24,7 @@ public class User {
 	public void showInfor() {
 		System.out.println("\nUser information: ");
 		System.out.println("\tMã id người dùng: " + userId);
-		System.out.println("\tTên người dùng: ");
+		System.out.println("\tTên người dùng: "+name);
 		System.out.println("");
 	}
 
