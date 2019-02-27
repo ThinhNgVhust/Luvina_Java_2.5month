@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="demSoUoc" key="selection"/>
+		<item value="carId" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="id"/>
+			<item value="endPos"/>
+			<item value="outPath"/>
+			<item value="dsChuDe"/>
 			<item value="findMax"/>
 			<item value="finMax"/>
 			<item value="`"/>
@@ -19,12 +23,12 @@
 			<item value="checkCheoPhai"/>
 			<item value="TYPE_ID"/>
 			<item value="minString"/>
-			<item value="findById"/>
-			<item value="findByName"/>
-			<item value="listHoc"/>
-			<item value="tuoi"/>
 		</list>
 		<list key="replacehistory">
+			<item value="carId"/>
+			<item value="destPos"/>
+			<item value="destPath"/>
+			<item value="dsHinhAnh"/>
 			<item value="demSoUoc"/>
 			<item value="findMax"/>
 			<item value="checkCheoLen"/>
@@ -36,10 +40,6 @@
 			<item value="age"/>
 			<item value="name"/>
 			<item value="maxStr"/>
-			<item value=""/>
-			<item value="themTaiLieu"/>
-			<item value="nElements"/>
-			<item value="str"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

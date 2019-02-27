@@ -57,6 +57,18 @@ public class Province {
 		return tidbits;
 	}
 
+	public void letKeMonAn() {
+		// TODO Auto-generated method stub
+		if (this.dsTidbit.size() == 0) {
+			System.out.println("Không tồn tại món ăn nào trong danh sách");
+		} else {
+			System.out.println("\nDanh sách các món ăn trong tỉnh " + name);
+			for (Tidbit tidbit : this.dsTidbit) {
+				System.out.println("\t" + tidbit.getId() + ": " + tidbit.getName());
+			}
+		}
+	}
+
 	private boolean isEmpty() {
 		return this.dsTidbit.isEmpty();
 	}
@@ -80,18 +92,6 @@ public class Province {
 			return this.id - ((Province) obj).id == 0;
 		}
 		return false;
-	}
-
-	public void letKeMonAn() {
-		// TODO Auto-generated method stub
-		if (this.dsTidbit.size() == 0) {
-			System.out.println("Không tồn tại món ăn nào trong danh sách");
-		} else {
-			System.out.println("\nDanh sách các món ăn trong tỉnh " + name);
-			for (Tidbit tidbit : this.dsTidbit) {
-				System.out.println("\t" + tidbit.getId() + ": " + tidbit.getName());
-			}
-		}
 	}
 
 }

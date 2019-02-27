@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="/home/thinhnv/Documents/AlgorithmsAndDataStructures" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/home/thinhnv/Desktop/LamLaiGGPhoto" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
@@ -9,10 +10,10 @@
 		<item value="false" key="linkWithEditor"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item value="642" key="DIALOG_WIDTH"/>
+		<item value="655" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="716" key="DIALOG_HEIGHT"/>
-		<item value="333" key="DIALOG_X_ORIGIN"/>
+		<item value="38" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="SourceActionDialog.constructors">
