@@ -30,8 +30,8 @@ public class Schedule {
 		System.out.println("\tHọ tên người dùng: " + userName);
 		System.out.println("\tVị trí đầu: " + startPos);
 		System.out.println("\tVị trí kết thúc: " + destPos);
-		System.out.println("\tSố km: " + kmTotal);
-		System.out.println("\tChi phí: " + cost+"\n");
+		System.out.println("\tSố km: " + kmTotal + " km");
+		System.out.println("\tChi phí: " + cost + "\n");
 	}
 
 	public String getCarId() {

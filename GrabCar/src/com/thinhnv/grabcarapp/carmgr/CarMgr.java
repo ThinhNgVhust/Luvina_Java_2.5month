@@ -22,7 +22,7 @@ public class CarMgr implements FindAndMoveListener {
 			System.out.println("Thêm xe thành công");
 			return;
 		} else {
-			System.out.println("Đã tồn tại xe với mã " + car.getcarId() + " không thêm được xe!");
+			System.out.println("Đã tồn tại xe với mã " + car.getcarId() + ", không thêm được xe!");
 		}
 
 	}
@@ -32,7 +32,7 @@ public class CarMgr implements FindAndMoveListener {
 			System.out.println("Danh sách ô tô trống, không hiển thị được thông tin");
 		} else {
 
-			System.out.println("-------------Thông tin các xe của quản lý " + name + "-------------");
+			System.out.println("\n-------------Thông tin các xe của quản lý " + name + "-------------");
 			for (Car car : listCar) {
 				car.showInfor();
 			}
@@ -57,7 +57,9 @@ public class CarMgr implements FindAndMoveListener {
 	@Override
 	public Car find(char startPos, char destPos, String typePos) {
 		// TODO Auto-generated method stub
-		// tim kiem va tra ve o to toi uu theo vi tri hien tai
+		if (startPos == destPos) {
+			return null;
+		}
 		if (this.listCar.isEmpty()) {
 			System.out.println("Công ty của " + name + " hiện chưa có ô tô nào để phục vụ quí khách!!!");
 			return null;
@@ -71,14 +73,6 @@ public class CarMgr implements FindAndMoveListener {
 			System.out.println("Không tìm được loại xe " + typePos + " theo yêu cầu, đề nghị quí khách vẫy xe khác!");
 			return null;
 		}
-		// neu chi tim thay 1 xe
-//		if (rightTypePosCar.size() == 1) {
-//			return rightTypePosCar.get(0);
-//		}
-		// neu tim thay nhieu xe co cung typePos
-		// thi tim kiem vi tri gan nhat
-
-		// tim kiem vi tri gan nhat
 		int minDistance = Math.abs(startPos - rightTypePosCar.get(0).getdestPos());
 		for (int i = 0; i < rightTypePosCar.size(); i++) {
 			int curDistance = Math.abs(rightTypePosCar.get(i).getdestPos() - startPos);
@@ -86,7 +80,6 @@ public class CarMgr implements FindAndMoveListener {
 				minDistance = curDistance;
 			}
 		}
-		// lay cac xe co vi tri min
 		List<Car> minDistanceCar = new ArrayList<Car>();
 		for (int i = 0; i < rightTypePosCar.size(); i++) {
 			int curDistance = Math.abs(rightTypePosCar.get(i).getdestPos() - startPos);
@@ -94,7 +87,6 @@ public class CarMgr implements FindAndMoveListener {
 				minDistanceCar.add(rightTypePosCar.get(i));
 			}
 		}
-		// lay tiep cac oto co chi phi re nhat
 		Car rightCar = minDistanceCar.get(0);
 		for (int i = 0; i < minDistanceCar.size(); i++) {
 			if (rightCar.getPrice() >= minDistanceCar.get(i).getPrice())
@@ -110,6 +102,8 @@ public class CarMgr implements FindAndMoveListener {
 		if (car == null) {
 			return;
 		}
+		System.out.println("Quản lý " + name + " đang điều động xe " + cardId);
+		System.out.println(cardId + " thực hiện lái từ " + startPos + " đến " + destPos);
 		car.drive(startPos, destPos);
 		return;
 	}

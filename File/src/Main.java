@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String path = "/home/thinhnv/Desktop/thinh";
+		String path = "/home/thinhnv/Desktop/[BTVN]-Java Swing1.pages";
 //		File file = new File(path);
 //		boolean kq = file.exists();
 //		if (kq) {
@@ -50,6 +50,11 @@ public class Main {
 //			e.printStackTrace();
 //		}
 		FileManager fileManager = new FileManager(path);
+		if(!fileManager.isExist()) {
+			fileManager.creatFile(true);
+		}else {
+			fileManager.creatFile(false);
+		}		
 //		try {
 //			fileManager.rename("t.txt");
 //		} catch (Exception e) {
@@ -57,7 +62,7 @@ public class Main {
 //			System.out.println(e.getMessage());
 //		}
 //		File thinh = new File(path);
-		fileManager.getSubFile();
+//		fileManager.getSubFile();
 		
 	}
 }

@@ -12,19 +12,20 @@ public class User {
 	private String userId;
 	private String pass;
 	private String name;
-	List<Schedule> listSchedule = new ArrayList<Schedule>();
+	List<Schedule> listSchedule;
 	private FindAndMoveListener findAndMoveListener;
 
 	public User(String userId, String pass, String name) {
 		this.userId = userId;
 		this.pass = pass;
 		this.name = name;
+		listSchedule = new ArrayList<Schedule>();
 	}
 
 	public void showInfor() {
-		System.out.println("\nUser information: ");
+		System.out.println("\nThông tin người dùng: ");
 		System.out.println("\tMã id người dùng: " + userId);
-		System.out.println("\tTên người dùng: "+name);
+		System.out.println("\tTên người dùng: " + name);
 		System.out.println("");
 	}
 
@@ -33,6 +34,9 @@ public class User {
 	}
 
 	public void findCar(char startPos, char destPos, String typePos) {
+		if(startPos == destPos) {
+			System.out.println(name + " không gọi được xe do vị trí cần đi đang ở vị trí hiện tại");
+		}
 		if (this.findAndMoveListener == null) {
 			System.out.println(name
 					+ " chưa đăng kí lắng nghe và nhận phản hồi từ bất cứ nhà xe nào \n   nên không thể tìm kiếm xe");
@@ -40,10 +44,9 @@ public class User {
 		}
 		Car car = this.findAndMoveListener.find(startPos, destPos, typePos);
 		if (car == null) {
-
 			return;
 		}
-		System.out.println("Kết quả tìm kiếm phù hợp nhất là: ");
+		System.out.println("Xe tìm kiếm phù hợp nhất là "+ car.getcarId() + " có các thông tin");
 		car.showInfor();
 		String carId = car.getcarId();
 		this.findAndMoveListener.move(startPos, destPos, carId);
@@ -66,7 +69,7 @@ public class User {
 		int stt = 1;
 
 		for (Schedule schedule : listSchedule) {
-			System.out.print((stt++) + " ");
+			System.out.print("                "+(stt++) + ".");
 			schedule.showInfor();
 			totalCost += schedule.getCost();
 		}

@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String path = "/home/thinhnv/Desktop";
+		String path = "/home/thinhnv/Desktop/[BTVN]-Java Swing1.pages";
 		FileManager fileManager = new FileManager(path);
 		System.out.println("-------------------fileManager.findByExtension(\".txt\");------------------------");
 		fileManager.findByExtension(".class");

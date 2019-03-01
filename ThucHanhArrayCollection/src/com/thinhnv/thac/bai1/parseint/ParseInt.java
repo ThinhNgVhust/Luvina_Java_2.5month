@@ -1,6 +1,5 @@
 package com.thinhnv.thac.bai1.parseint;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 

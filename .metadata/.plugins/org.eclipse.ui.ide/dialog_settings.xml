@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/eclipse-workspace/File"/>
+		<item value="/home/thinhnv/eclipse-workspace/ParseInt"/>
+		<item value="/home/thinhnv/eclipse-workspace/GrabCar"/>
 		<item value="/home/thinhnv/eclipse-workspace/FileManager"/>
 		<item value="/home/thinhnv/Desktop/LamLaiGGPhoto"/>
 		<item value="/home/thinhnv/eclipse-workspace/ThucHanhArrayCollection"/>

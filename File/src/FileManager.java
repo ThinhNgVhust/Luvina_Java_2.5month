@@ -14,16 +14,13 @@ public class FileManager {
 	private File file;
 	private ArrayList<File> files = new ArrayList<File>();
 
-	private String format(double a) {
-		String pattern = "###,###.##";
-		DecimalFormat decimalFormat = new DecimalFormat(pattern);
-		String format = decimalFormat.format(a);
-		return format;
-	}
-
 	public FileManager(String path) {
 		this.pathname = path;
 		this.file = new File(pathname);
+	}
+
+	public boolean isExist() {
+		return file.exists();
 	}
 
 	public void creatFile(boolean isRenew) {
@@ -98,7 +95,6 @@ public class FileManager {
 		ArrayList<File> list = new ArrayList<File>();
 
 		list.addAll(Arrays.asList(this.file.listFiles()));
-//		System.out.println(list.size());
 		if (!this.file.exists()) {
 			notify("File khong ton tai");
 			return;
@@ -108,17 +104,26 @@ public class FileManager {
 					continue;
 				} else if (list.get(i).isDirectory()) {
 					list.addAll(Arrays.asList(list.get(i).listFiles()));
-//					i--;
+					list.remove(i);
+					i--;
 				}
 			}
-//			System.out.println("here");
 			for (File file : list) {
 				if (file.isFile()) {
 					this.showFile(file);
 				}
 			}
 		}
+
 	}
+
+	private String format(double a) {
+		String pattern = "###,###.##";
+		DecimalFormat decimalFormat = new DecimalFormat(pattern);
+		String format = decimalFormat.format(a);
+		return format;
+	}
+
 //	public void getSubFile() {
 //		if (!this.file.exists()) {
 //			notify("File khong ton tai");
