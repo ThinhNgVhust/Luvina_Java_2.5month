@@ -1,5 +1,11 @@
 package com.thinhnv.jframe.main;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Insets;
+
+import javax.swing.JFrame;
+
 import com.thinhnv.jframe.gui.GUI;
 
 public class Main {

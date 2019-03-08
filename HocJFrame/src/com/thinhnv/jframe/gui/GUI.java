@@ -1,6 +1,8 @@
 package com.thinhnv.jframe.gui;
 
+import java.awt.Button;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Panel;
 import java.util.Random;
 
@@ -31,28 +33,10 @@ public class GUI extends JFrame {
 		}
 	}
 
-	private void addEventsGUI() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void initGUI(String title) {
-		// TODO Auto-generated method stub
-		setTitle(title);
-		setSize(WIDTH_FRAME, HEIGHT_FRAME);
-		setLocationRelativeTo(null);// dùng thay setBounds
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getContentPane().setBackground(Color.WHITE);
-		setLayout(null);
-		setResizable(false);
-
-	}
-
 	private Panel getPanel(int x, int y, int width, int height) {
 		Panel panel = new Panel();
 		panel.setSize(width, height);
 		panel.setLocation(x, y);
-		panel.setBackground(Color.RED);
 		Random rd = new Random();
 		int red = rd.nextInt(256);
 		int green = rd.nextInt(256);
@@ -61,4 +45,25 @@ public class GUI extends JFrame {
 		panel.setBackground(randomColor);
 		return panel;
 	}
+
+	private void addEventsGUI() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void initGUI(String title) {
+		// TODO Auto-generated method stub
+		setTitle(title);
+		setSize(WIDTH_FRAME , HEIGHT_FRAME );
+		setPreferredSize(new Dimension(WIDTH_FRAME, HEIGHT_FRAME));
+		setLocationRelativeTo(null);// dùng thay setBounds
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocation(200, 200);
+		getContentPane().setBackground(Color.WHITE);
+		getContentPane().setSize(100 + WIDTH_FRAME, HEIGHT_FRAME);
+		setLayout(null);
+		setResizable(false);
+
+	}
+
 }

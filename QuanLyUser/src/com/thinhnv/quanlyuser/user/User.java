@@ -1,68 +1,55 @@
 package com.thinhnv.quanlyuser.user;
 
+import com.thinhnv.quanlyuser.account.Account;
+
 public class User {
-	private String maTK;
-	private String pass;
+	private Account account;
 	private String ten;
-	private String SDT;
-	private IDangKy dangky;
+	private String sdt;
+	private IDangKy iDangKy;
 
-	public User(String maTK, String pass, String ten, String SDT) {
-		this.maTK = maTK;
-		this.pass = pass;
+	public User(Account account, String ten, String sdt) {
+		this.account = account;
 		this.ten = ten;
-		this.SDT = SDT;
+		this.sdt = sdt;
 	}
 
-	public void dangKy(IDangKy iDangKy) {
-		this.dangky = iDangKy;
-//		this.dangky.add(this);
+	public void dangKy(IDangKy event) {
+		this.iDangKy = event;
+		this.iDangKy.dangKy(this);
 	}
 
-	public void dangNhap() {
-		if (this.dangky == null) {
-			System.out.println("Tài khoản này chưa đăng kí");
-			return;
+	public void dangNhap(String matKhau) {
+		if (this.iDangKy == null) {
+			System.out.println("Chua dang ki");
 		} else {
-			this.dangky.dangNhap(this);
+			this.iDangKy.dangNhap(this.account.getMaTK(), matKhau);
 		}
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		if (obj instanceof User) {
-			return maTK.equals(((User) obj).maTK);
-		}
-		return false;
-	}
-
-	public interface IDangKy {
-		public void add(User user);
-
-		public void dangNhap(User user);
-	}
-
-	public String getMaTK() {
-		return maTK;
+	public Account getAccount() {
+		return account;
 	}
 
 	public String getTen() {
 		return ten;
 	}
 
-	public String getSDT() {
-		return SDT;
-	}
-
-	public String getPass() {
-		// TODO Auto-generated method stub
-		return this.pass;
+	public String getSdt() {
+		return sdt;
 	}
 
 	@Override
-	public String toString() {
-		return this.maTK + "-" + this.ten + "-" + this.SDT + "-" + this.pass;
+	public boolean equals(Object obj) {
+		if (obj instanceof User) {
+			return this.getAccount().getMaTK().equals(((User) obj).getAccount().getMaTK());
+		}
+		return false;
 	}
 
+	public interface IDangKy {
+		public void dangKy(User user);
+
+		public void dangNhap(String maTK, String matKhau);
+	}
 }

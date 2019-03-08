@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/eclipse-workspace/UI-TinhTongAB"/>
+		<item value="/home/thinhnv/eclipse-workspace/ArrInt"/>
+		<item value="/home/thinhnv/eclipse-workspace/UI-SapXep"/>
+		<item value="/home/thinhnv/Desktop/UI-TinhTongAb"/>
+		<item value="/home/thinhnv/eclipse-workspace/GameCaro"/>
+		<item value="/home/thinhnv/GUIProgramming/JAVAAWT/Ex1AWTCounter"/>
+		<item value="/home/thinhnv/eclipse-workspace/ThucHanhGiaoDien"/>
+		<item value="/home/thinhnv/GUIProgramming/JAVAAWT/Ex6Layout/BorderLayout"/>
+		<item value="/home/thinhnv/GUIProgramming/JAVAAWT/Ex6Layout"/>
+		<item value="/home/thinhnv/GUIProgramming/Ex1AWTCounter"/>
+		<item value="/home/thinhnv/Desktop/MultiLayout"/>
+		<item value="/home/thinhnv/eclipse-workspace/HocJPanel"/>
+		<item value="/home/thinhnv/eclipse-workspace/HocJFrame"/>
 		<item value="/home/thinhnv/eclipse-workspace/File"/>
 		<item value="/home/thinhnv/eclipse-workspace/ParseInt"/>
 		<item value="/home/thinhnv/eclipse-workspace/GrabCar"/>
@@ -55,6 +68,9 @@
 		<item value="/home/thinhnv/eclipse-workspace/SortNative"/>
 		<item value="/home/thinhnv/eclipse-workspace/ThucHanhIfElse"/>
 	</list>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item value="/home/thinhnv/Desktop/UI-HocTiengAnh" key="OUTSIDE_LOCATION"/>
+	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">

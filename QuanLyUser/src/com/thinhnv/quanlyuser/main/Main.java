@@ -1,5 +1,6 @@
 package com.thinhnv.quanlyuser.main;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Random;
@@ -7,6 +8,7 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 import com.thinhnv.quanlyuser.account.Account;
+import com.thinhnv.quanlyuser.quanlyuser.QuanLyUser;
 import com.thinhnv.quanlyuser.user.User;
 
 public class Main {
@@ -14,11 +16,9 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		String path = "/home/thinhnv/user.txt";
-		Account account = new Account(path);
-		User user = new User("12345678", "pass", "ten", "SDT");
-		user.dangNhap();
-		user.dangKy(account);
-		account.inTTUser();
-		user.dangNhap();
+		QuanLyUser quanLyUser = new QuanLyUser(path);
+		quanLyUser.sapXepTheoTen();
+		quanLyUser.xoaData();
 	}
+
 }

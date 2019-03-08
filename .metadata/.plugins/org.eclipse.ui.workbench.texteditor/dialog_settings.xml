@@ -2,29 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="lbPassWord" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="PassWord"/>
+			<item value="UserName"/>
+			<item value="tfB"/>
+			<item value="tfA"/>
+			<item value="lbB"/>
+			<item value="lbA"/>
+			<item value="actionPerformed"/>
+			<item value="ac"/>
+			<item value="right"/>
+			<item value="Chua dang ki"/>
+			<item value="System.out.println"/>
+			<item value="addUser"/>
 			<item value="end"/>
 			<item value="notify"/>
 			<item value="no"/>
-			<item value="id"/>
-			<item value="endPos"/>
-			<item value="outPath"/>
-			<item value="dsChuDe"/>
-			<item value="findMax"/>
-			<item value="finMax"/>
-			<item value="`"/>
-			<item value="i"/>
-			<item value="toString()"/>
-			<item value="toString"/>
-			<item value="to"/>
-			<item value="checkCheoTrai"/>
 		</list>
 		<list key="replacehistory">
+			<item value="lbPassWord"/>
+			<item value="lbUserName"/>
+			<item value="tfPassWord"/>
+			<item value="tfUserName"/>
+			<item value="PassWord"/>
+			<item value="UserName"/>
+			<item value="lbTitle"/>
+			<item value="addUserIntoList"/>
 			<item value="carId"/>
 			<item value="destPos"/>
 			<item value="destPath"/>
@@ -32,14 +40,6 @@
 			<item value="demSoUoc"/>
 			<item value="findMax"/>
 			<item value="checkCheoLen"/>
-			<item value="checkCheoXuong"/>
-			<item value="TYPE_NOI_BAN"/>
-			<item value="finMinString"/>
-			<item value="timMaTruyen"/>
-			<item value="timTenTruyen"/>
-			<item value="age"/>
-			<item value="name"/>
-			<item value="maxStr"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
