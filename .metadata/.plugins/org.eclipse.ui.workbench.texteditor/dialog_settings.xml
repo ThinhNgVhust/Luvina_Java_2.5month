@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="380" key="DIALOG_X_ORIGIN"/>
+		<item value="243" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="lbPassWord" key="selection"/>
+		<item value="cbbColor" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="jComboBoxColor"/>
 			<item value="PassWord"/>
 			<item value="UserName"/>
 			<item value="tfB"/>
@@ -22,9 +27,9 @@
 			<item value="addUser"/>
 			<item value="end"/>
 			<item value="notify"/>
-			<item value="no"/>
 		</list>
 		<list key="replacehistory">
+			<item value="cbbColor"/>
 			<item value="lbPassWord"/>
 			<item value="lbUserName"/>
 			<item value="tfPassWord"/>
@@ -39,14 +44,13 @@
 			<item value="dsHinhAnh"/>
 			<item value="demSoUoc"/>
 			<item value="findMax"/>
-			<item value="checkCheoLen"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="342" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="406" key="DIALOG_HEIGHT"/>
-		<item value="0" key="DIALOG_X_ORIGIN"/>
-		<item value="97" key="DIALOG_Y_ORIGIN"/>
+		<item value="535" key="DIALOG_X_ORIGIN"/>
+		<item value="85" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

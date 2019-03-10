@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/eclipse-workspace/UISampleAPI"/>
+		<item value="/home/thinhnv/GUIProgramming/JAVAAWT/Ex3AWTMouseEvenMotionDemo"/>
+		<item value="/home/thinhnv/Desktop/UI-JTable"/>
+		<item value="/home/thinhnv/eclipse-workspace/UI-Color"/>
+		<item value="/home/thinhnv/Desktop"/>
+		<item value="/home/thinhnv/Desktop/UI-JComboBox"/>
+		<item value="/home/thinhnv/Desktop/UI-HocTiengAnh"/>
+		<item value="/home/thinhnv/eclipse-workspace/UI-Login"/>
+		<item value="/home/thinhnv/eclipse-workspace/UI-JComboBox"/>
 		<item value="/home/thinhnv/eclipse-workspace/UI-TinhTongAB"/>
 		<item value="/home/thinhnv/eclipse-workspace/ArrInt"/>
 		<item value="/home/thinhnv/eclipse-workspace/UI-SapXep"/>
@@ -69,7 +78,7 @@
 		<item value="/home/thinhnv/eclipse-workspace/ThucHanhIfElse"/>
 	</list>
 	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
-		<item value="/home/thinhnv/Desktop/UI-HocTiengAnh" key="OUTSIDE_LOCATION"/>
+		<item value="/home/thinhnv/Desktop/UI-JTable" key="OUTSIDE_LOCATION"/>
 	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
