@@ -130,13 +130,13 @@ public class TablePanel extends BasePanel implements ActionListener {
 		jTable.setModel(model);
 	}
 
-	private void initCCBModel(JComboBox<String> allTimeCbb2) {
+	private void initCCBModel(JComboBox<String> ccbCur) {
 		// TODO Auto-generated method stub
 		DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
 		for (int i = 0; i < TIME.length; i++) {
 			model.addElement(TIME[i]);
 		}
-		allTimeCbb2.setModel(model);
+		ccbCur.setModel(model);
 	}
 
 	@Override

@@ -3,53 +3,56 @@ package com.thinhnv.quanlyuser.user;
 import com.thinhnv.quanlyuser.account.Account;
 
 public class User {
+	private String hoTen;
+	private String soDT;
 	private Account account;
-	private String ten;
-	private String sdt;
-	private IDangKy iDangKy;
+	private IHanhVi iHanhVi;
 
-	public User(Account account, String ten, String sdt) {
+	public User(String hoTen, String soDT, Account account) {
+		this.hoTen = hoTen;
+		this.soDT = soDT;
 		this.account = account;
-		this.ten = ten;
-		this.sdt = sdt;
 	}
 
-	public void dangKy(IDangKy event) {
-		this.iDangKy = event;
-		this.iDangKy.dangKy(this);
+	public void dangKi(IHanhVi iHanhVi) {
+		this.iHanhVi = iHanhVi;
+		iHanhVi.dangKi(this.account, this.hoTen, this.soDT);
 	}
 
-	public void dangNhap(String matKhau) {
-		if (this.iDangKy == null) {
+	public void dangNhap() {
+		if (this.iHanhVi == null) {
 			System.out.println("Chua dang ki");
+			return;
 		} else {
-			this.iDangKy.dangNhap(this.account.getMaTK(), matKhau);
+			if (this.iHanhVi.dangNhap(this.account)) {
+				System.out.println("Dang nhap thanh cong");
+			} else {
+				System.out.println("Tai khoan hoac mat khau khong chinh xac");
+			}
 		}
+
 	}
 
-	public Account getAccount() {
-		return account;
+	public String getHoTen() {
+		return this.hoTen;
 	}
 
-	public String getTen() {
-		return ten;
-	}
-
-	public String getSdt() {
-		return sdt;
+	public Account getAcount() {
+		return this.account;
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof User) {
-			return this.getAccount().getMaTK().equals(((User) obj).getAccount().getMaTK());
-		}
-		return false;
+	public String toString() {
+		return account.getMaTK() + "-" + account.getMatKhau() + "-" + hoTen + "-" + soDT;
 	}
 
-	public interface IDangKy {
-		public void dangKy(User user);
+	public interface IHanhVi {
+		public void dangKi(Account account,String hoTen, String soDT);
 
-		public void dangNhap(String maTK, String matKhau);
+		public boolean dangNhap(Account account);
+	}
+
+	public int soSanhTheoTen(User user) {
+		return this.hoTen.compareTo(user.getHoTen());
 	}
 }

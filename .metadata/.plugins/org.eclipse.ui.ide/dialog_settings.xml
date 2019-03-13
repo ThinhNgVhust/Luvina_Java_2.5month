@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/thinhnv/eclipse-workspace/QuanLyUser"/>
+		<item value="/home/thinhnv/eclipse-workspace/UI-HocTiengAnh-Update"/>
+		<item value="/home/thinhnv/eclipse-workspace/TimeTable"/>
+		<item value="/home/thinhnv/Desktop/UI-TimeTable"/>
 		<item value="/home/thinhnv/eclipse-workspace/UISampleAPI"/>
 		<item value="/home/thinhnv/GUIProgramming/JAVAAWT/Ex3AWTMouseEvenMotionDemo"/>
 		<item value="/home/thinhnv/Desktop/UI-JTable"/>
