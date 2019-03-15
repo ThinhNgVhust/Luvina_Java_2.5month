@@ -1,14 +1,9 @@
-package com.thinhnv.projectname.ui.panel;
+package com.thinhnv.formhs.ui.panel;
 
 import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontMetrics;
-
-import javax.swing.JButton;
 
 public class MainPanel extends BasePanel {
-	JButton btn, btnBig;
+	private FormHSPanel formHSPanel;
 
 	@Override
 	public void init() {
@@ -25,6 +20,8 @@ public class MainPanel extends BasePanel {
 	@Override
 	public void addCompts() {
 		// TODO Auto-generated method stub
+		formHSPanel = new FormHSPanel();
+		add(formHSPanel);
 	}
 
 }

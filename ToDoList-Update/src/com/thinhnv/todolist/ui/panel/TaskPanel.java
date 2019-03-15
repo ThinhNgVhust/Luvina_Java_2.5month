@@ -19,6 +19,7 @@ public class TaskPanel extends BasePanel implements ActionListener {
 	public void init() {
 		// TODO Auto-generated method stub
 		this.setLayout(null);
+		setBackground(Color.CYAN);
 
 	}
 
@@ -43,11 +44,11 @@ public class TaskPanel extends BasePanel implements ActionListener {
 		lbThoiGian.setLocation(tfNoiDung.getX(), tfNoiDung.getY() + tfNoiDung.getHeight() + 50);
 		add(lbThoiGian);
 
-		tfThoiGian = initTextField(400 - lbThoiGian.getX() - lbThoiGian.getWidth() - 30, fNormal, Color.black,
+		tfThoiGian = initTextField(400 - lbThoiGian.getX() - lbThoiGian.getWidth() - 30, fHeader, Color.black,
 				isEditable);
 		tfThoiGian.setSize(tfThoiGian.getWidth() + 50, tfNoiDung.getHeight());
 		tfThoiGian.setLocation(lbThoiGian.getX() + lbThoiGian.getWidth() + 30,
-				lbThoiGian.getY() - tfThoiGian.getInsets().top);
+				lbThoiGian.getY() - tfThoiGian.getInsets().top - 5);
 
 		add(tfThoiGian);
 		btnAdd = initButton("Add Task", fHeader, Color.black, BTN_ADD, this);
@@ -72,8 +73,8 @@ public class TaskPanel extends BasePanel implements ActionListener {
 				return;
 			}
 			goBack(noiDung, thoiGian);
-			tfNoiDung.setText("");
-			tfThoiGian.setText("");
+			tfNoiDung.setText(null);
+			tfThoiGian.setText(null);
 		}
 	}
 

@@ -26,7 +26,7 @@ public abstract class BasePanel extends JPanel implements ICommon {
 	protected JTable initTable(Font f, Font fHeader, Color bg, Color cHeader, boolean isShowGrid) {
 		// TODO Auto-generated method stub
 		f = new Font("Tahoma", Font.PLAIN, 15);
-		JTable	table = new JTable() {
+		JTable table = new JTable() {
 			@Override
 			public boolean isCellEditable(int row, int column) {
 				// TODO Auto-generated method stub
@@ -37,6 +37,7 @@ public abstract class BasePanel extends JPanel implements ICommon {
 		JTableHeader header = table.getTableHeader();
 		((DefaultTableCellRenderer) table.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
 		((DefaultTableCellRenderer) table.getTableHeader().getDefaultRenderer()).setBackground(cHeader);
+//		table.getTableHeader().setOpaque(false);
 		header.setBackground(cHeader);
 		header.setFont(fHeader);
 		table.setBackground(bg);
@@ -59,7 +60,7 @@ public abstract class BasePanel extends JPanel implements ICommon {
 		return lb;
 	}
 
-	protected JButton initButton(String text, Font f, Color c,String name,ActionListener e) {
+	protected JButton initButton(String text, Font f, Color c, String name, ActionListener e) {
 		JButton bt = new JButton(text);
 		bt.setFont(f);
 		bt.setForeground(c);
@@ -76,7 +77,7 @@ public abstract class BasePanel extends JPanel implements ICommon {
 		return bt;
 	}
 
-	protected JButton initButton(String text, Font f, Color c, int width,String name,ActionListener e) {
+	protected JButton initButton(String text, Font f, Color c, int width, String name, ActionListener e) {
 		JButton bt = new JButton(text);
 		bt.setFont(f);
 		bt.setForeground(c);

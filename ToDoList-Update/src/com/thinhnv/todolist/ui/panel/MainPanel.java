@@ -27,7 +27,7 @@ public class MainPanel extends BasePanel {
 		add(taskPanel);
 	}
 
-	public void goNext() {
+	public void goTaskPanel() {
 		// TODO Auto-generated method stub
 		this.toDo.setVisible(false);
 		this.taskPanel.setVisible(true);

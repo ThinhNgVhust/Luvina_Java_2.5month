@@ -10,12 +10,12 @@ public class TaskManager {
 		this.lsTask = new ArrayList<Task>();
 	}
 
-	public void addTask(int stt,String noiDung, String thoiGian) {
-		this.lsTask.add(new Task(stt,noiDung, thoiGian));
+	public void addTask(int stt, String noiDung, String thoiGian) {
+		this.lsTask.add(new Task(stt, noiDung, thoiGian));
 	}
 
 	public void xoaTask(int x) {
-		this.lsTask.remove(x);
+		this.lsTask.set(x, null);
 	}
 
 	public ArrayList<Task> getLsTask() {

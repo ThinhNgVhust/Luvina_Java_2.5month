@@ -14,7 +14,7 @@ import com.thinhnv.projectname.ui.panel.MainPanel;
 
 public class GUI extends JFrame implements ICommon {
 	private static final String TITLE = "Color Item";
-	public static final int F_WIDTH = 600;
+	public static final int F_WIDTH = 650;
 	public static final int F_HEIGHT = 300;
 	private MainPanel mainPanel;
 

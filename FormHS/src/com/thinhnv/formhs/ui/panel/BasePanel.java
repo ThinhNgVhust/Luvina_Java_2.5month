@@ -1,4 +1,4 @@
-package com.thinhnv.projectname.ui.panel;
+package com.thinhnv.formhs.ui.panel;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,17 +11,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 
-import com.thinhnv.projectname.ui.icommon.ICommon;
+import com.thinhnv.formhs.ui.icommon.ICommon;
 
 public abstract class BasePanel extends JPanel implements ICommon {
-//	protected static Font fNormal = new Font("Tahoma", Font.BOLD, 10);
-//	protected static Font fNormal = new Font("Tahoma", Font.BOLD, 15);
-//	protected static Font fNormal = new Font("Tahoma", Font.BOLD, 20);
-//	protected static Font fNormal = new Font("Tahoma", Font.BOLD, 25);
 	public BasePanel() {
 		init();
 		addEvents();
@@ -31,7 +26,7 @@ public abstract class BasePanel extends JPanel implements ICommon {
 	protected JTable initTable(Font f, Font fHeader, Color bg, Color cHeader, boolean isShowGrid) {
 		// TODO Auto-generated method stub
 		f = new Font("Tahoma", Font.PLAIN, 15);
-		JTable table = new JTable() {
+		JTable	table = new JTable() {
 			@Override
 			public boolean isCellEditable(int row, int column) {
 				// TODO Auto-generated method stub
@@ -46,7 +41,6 @@ public abstract class BasePanel extends JPanel implements ICommon {
 		header.setFont(fHeader);
 		table.setBackground(bg);
 		table.setShowGrid(isShowGrid);
-		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table.setCellSelectionEnabled(true);
 		return table;
 	}
@@ -65,7 +59,7 @@ public abstract class BasePanel extends JPanel implements ICommon {
 		return lb;
 	}
 
-	protected JButton initButton(String text, Font f, Color c, String name, ActionListener e) {
+	protected JButton initButton(String text, Font f, Color c,String name,ActionListener e) {
 		JButton bt = new JButton(text);
 		bt.setFont(f);
 		bt.setForeground(c);
@@ -82,14 +76,12 @@ public abstract class BasePanel extends JPanel implements ICommon {
 		return bt;
 	}
 
-	protected JButton initButton(String text, Font f, Color c, int width, String name, ActionListener e) {
+	protected JButton initButton(String text, Font f, Color c, int width,String name,ActionListener e) {
 		JButton bt = new JButton(text);
 		bt.setFont(f);
 		bt.setForeground(c);
-		FontMetrics metrics = getFontMetrics(bt.getFont());
-		int hLb = metrics.getHeight();
-		int wLb = metrics.stringWidth(bt.getText());
-		bt.setSize(width + wLb, width + hLb);
+		FontMetrics fm = getFontMetrics(bt.getFont());
+		bt.setSize(width, width);
 		bt.setName(name);
 		bt.addActionListener(e);
 		return bt;

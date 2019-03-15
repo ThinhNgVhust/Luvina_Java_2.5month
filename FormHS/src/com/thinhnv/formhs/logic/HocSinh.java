@@ -1,4 +1,4 @@
-package com.thinhnv.projectname.logic;
+package com.thinhnv.formhs.logic;
 
 public class HocSinh {
 	private String hoTen;
@@ -12,6 +12,21 @@ public class HocSinh {
 		this.diem = diem;
 	}
 
+
+	public String getHoTen() {
+		return hoTen;
+	}
+
+
+	public String getLop() {
+		return lop;
+	}
+
+
+	public String getDiem() {
+		return diem+"";
+	}
+	
 	@Override
 	public String toString() {
 		return hoTen + "_" + lop + "_" + diem;
